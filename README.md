@@ -1,14 +1,14 @@
 # [**All-in-One 搞基手册**](http://localhost:3000/)
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+这个网站使用 [Docusaurus 2](https://docusaurus.io/) 构建, a modern static website generator.
 
-### Installation
+### 安装
 
 ```
 $ yarn
 ```
 
-### Local Development
+### 开发
 
 ```
 $ yarn start
@@ -16,7 +16,7 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Build
+### 构建
 
 ```
 $ yarn build
@@ -39,4 +39,3 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-# all-in-one
