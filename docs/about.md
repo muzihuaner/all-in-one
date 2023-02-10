@@ -12,3 +12,7 @@ sidebar_position: 7
 [All in one入门之All in one和三种PVE、ESXI、Windows Server方案](https://www.cnblogs.com/alittlemc/p/16996277.html)
 
 [菜鸟教程](https://www.runoob.com/)
+
+[PVE虚拟机的安装](https://www.benzhu.xyz/pve/)
+
+[VMware vSphere ESXi 7.0安装教程](https://www.modb.pro/db/67054 "VMware vSphere ESXi 7.0安装教程")
