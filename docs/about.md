@@ -15,6 +15,6 @@ sidebar_position: 7
 
 [PVE虚拟机的安装](https://www.benzhu.xyz/pve/)
 
-[VMware vSphere ESXi 7.0安装教程](https://www.modb.pro/db/67054 "VMware vSphere ESXi 7.0安装教程")
+[Esxi 7.0 的详细安装教程及避坑指南！](https://www.iyio.net/2022/11/071558.html "VMware vSphere ESXi 7.0安装教程")
 
 [Windows 10 上的 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/)
