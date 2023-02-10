@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkall_in_one=self.webpackChunkall_in_one||[]).push([[6055],{1130:l=>{l.exports=JSON.parse('{"label":"allinone","permalink":"/blog/tags/allinone","allTagsPath":"/blog/tags","count":1}')}}]);
