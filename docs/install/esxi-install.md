@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# Exsi安装教程
+# Esxi安装教程
 
 下载：
 
@@ -10,7 +10,6 @@ sidebar_position: 2
 [https://sysin.org/blog/vmware/](https://sysin.org/blog/vmware/)
 
 [https://www.iyio.net/2022/11/071709.html](https://www.iyio.net/2022/11/071709.html)
-
 
 安装教程看这里
 
