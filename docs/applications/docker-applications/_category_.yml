@@ -1,0 +1,5 @@
+position: 2
+label: "Docker应用合集"
+collapsible: true
+collapsed: true
+className: "red"

@@ -18,3 +18,5 @@ sidebar_position: 7
 [Esxi 7.0 的详细安装教程及避坑指南！](https://www.iyio.net/2022/11/071558.html "VMware vSphere ESXi 7.0安装教程")
 
 [Windows 10 上的 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/)
+
+[Aria2 Pro-功能强大Aria2 Docker 容器镜像：安装简单,下载速度快](https://wzfou.com/aria2-pro-docker/)
