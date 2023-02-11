@@ -8,7 +8,7 @@ OpenMediaVault是一个开源的NAS（网络附加存储）解决方案，可以
 
 安装教程参考：
 
-[https://post.smzdm.com/p/av7z2564/](https://post.smzdm.com/p/av7z2564/)
+[https://momiji.fun/openmediavault-install/](https://momiji.fun/openmediavault-install/)
 
 OpenMediaVault 镜像
 
