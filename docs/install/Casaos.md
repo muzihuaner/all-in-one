@@ -8,7 +8,7 @@ CasaOS是一个基于Docker生态系统的开源家庭云系统，专为家庭�
 
 官方网站:[https://casaos.io/](https://casaos.io/)
 
-项目地址:z
+项目地址:[https://github.com/IceWhaleTech/CasaOS](https://github.com/IceWhaleTech/CasaOS)
 
 ## 安装
 
@@ -44,7 +44,6 @@ curl -fsSL https://get.casaos.io | bash
 * Armbian 22.04 (✅ 测试通过)
 * Alpine (🚧 尚未完全测试）
 * OpenWrt (🚧 尚未完全测试）
-
 
 ## 卸载 CasaOS
 
