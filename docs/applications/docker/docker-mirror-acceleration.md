@@ -9,6 +9,7 @@ sidebar_position: 6
 * 网易：**https://hub-mirror.c.163.com/**
 * 阿里云：**https://<你的ID>.mirror.aliyuncs.com**
 * 七牛云加速器：**https://reg-mirror.qiniu.com**
+* Docker加速：**https://dockerproxy.com/**
 
 当配置某一个加速器地址之后，若发现拉取不到镜像，请切换到另一个加速器地址。国内各大云服务商均提供了 Docker 镜像加速服务，建议根据运行 Docker 的云平台选择对应的镜像加速服务。
 
