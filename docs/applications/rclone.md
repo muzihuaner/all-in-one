@@ -63,13 +63,41 @@ The local filesystem
 curl https://rclone.org/install.sh | sudo bash
 ```
 
-### 配置rclone
+上面的命令如果安装不了，可以试试手动安装
+
+下载安装包并解压
+
+```
+curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+cd rclone-*-linux-amd64
+```
+
+移动文件
+
+```
+sudo cp rclone /usr/bin/
+sudo chown root:root /usr/bin/rclone
+sudo chmod 755 /usr/bin/rclone
+```
+
+安装 manpage
+
+```
+sudo mkdir -p /usr/local/share/man/man1
+sudo cp rclone.1 /usr/local/share/man/man1/
+sudo mandb
+```
+
+### 配置
+
+运行 `rclone config` 开始 更多内容可以看官方文档 [rclone config docs](https://rclone.org/docs/)
 
 ```
 rclone config
 ```
 
-### 配置过程代码
+### 配置过程
 
 ```
 [root@localhost yum.repos.d]# rclone config
@@ -251,7 +279,6 @@ DriverName是你在配置rclone的时候设置的名字,Folder没有需要求的
 
 执行完之后即可访问本地挂载的文件夹查看文件了.
 
-
 ### 设置开机自启
 
 ```
@@ -271,7 +298,6 @@ User=root
 WantedBy=default.target
 EOF
 ```
-
 
 开始启动：
 
