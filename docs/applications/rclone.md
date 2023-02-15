@@ -67,6 +67,10 @@ curl https://rclone.org/install.sh | sudo bash
 
 下载安装包并解压
 
+备用安装包地址：
+
+[https://github.com/rclone/rclone/releases](https://github.com/rclone/rclone/releases)
+
 ```
 curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
 unzip rclone-current-linux-amd64.zip
