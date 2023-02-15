@@ -11,3 +11,18 @@ Transmission是一款跨平台的BitTorrent客户端，用于在Mac OS X、Linux
 安装参考：
 
 [https://www.xiaoz.me/archives/15485](https://www.xiaoz.me/archives/15485)
+
+[https://cloud.tencent.com/developer/article/2072005](https://cloud.tencent.com/developer/article/2072005)
+
+```
+docker run -d --name="transmission" \
+  -e USERNAME=xiaoz \
+  -e PASSWORD=xiaoz.me \
+  -p 9091:9091 \
+  -p 51413:51413 \
+  -p 51413:51413/udp \
+  -v /data/downloads:/root/Downloads \
+  -v /data/transmission:/root/.config/transmission-daemon \
+  --restart=always \
+  helloz/transmission
+```

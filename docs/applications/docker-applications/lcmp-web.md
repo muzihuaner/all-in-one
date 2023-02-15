@@ -30,7 +30,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/dc
 
 ```
 
-
 ### 二、Mysql+PHPMyAdmin的部署
 
 1、创建文件夹
@@ -39,7 +38,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/dc
 mkdir db && cd db
 
 ```
-
 
 #### 2、创建docker-compose.yml文件
 
@@ -125,13 +123,11 @@ cp services/caddy/etc/caddy/Caddyfile.sample services/caddy/etc/caddy/Caddyfile
 
 ```
 
-
 #### 3、修改caddyfile
 
 ```
 nano /root/web/services/caddy/etc/caddy/Caddyfile
 ```
-
 
 #### 网站示例：
 
