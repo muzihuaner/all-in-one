@@ -14,7 +14,6 @@
 * 客户端使用 `HMCL`安装游戏。
 * 安装 `Optifine`来使用光影。
 
-![](//upload-images.jianshu.io/upload_images/13523736-6801b049c6ed588d.png?imageMogr2/auto-orient/strip|imageView2/2/w/856/format/webp)
 
 网络结构图
 
