@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkall_in_one=self.webpackChunkall_in_one||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u4f60\u597d\uff0cAll-in-One \u641e\u57fa\u624b\u518c\uff01","permalink":"/blog/welcome-docusaurus-v2"}]}')}}]);
