@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://allinone.quickso.cn/blog</id>
+    <title>All-in-One 搞基手册 Blog</title>
+    <updated>2023-02-10T07:53:41.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://allinone.quickso.cn/blog"/>
+    <subtitle>All-in-One 搞基手册 Blog</subtitle>
+    <icon>https://allinone.quickso.cn/img/allinone.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[你好，All-in-One 搞基手册！]]></title>
+        <id>https://allinone.quickso.cn/blog/welcome-docusaurus-v2</id>
+        <link href="https://allinone.quickso.cn/blog/welcome-docusaurus-v2"/>
+        <updated>2023-02-10T07:53:41.000Z</updated>
+        <summary type="html"><![CDATA[Hello,World!]]></summary>
+        <content type="html"><![CDATA[<p>欢迎来到本博客。 此博客使用 <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer"><strong>Docusaurus 2</strong></a> 搭建。</p><p>2023年2月10日，本项目上线啦！</p>]]></content>
+        <category label="hello" term="hello"/>
+        <category label="docusaurus-v2" term="docusaurus-v2"/>
+        <category label="allinone" term="allinone"/>
+    </entry>
+</feed>

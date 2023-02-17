@@ -1,6 +1,5 @@
 # MC服务器
 
-
 **服务端**
 
 * 新建一个 Linux的虚拟机，系统最好是Ubuntu或者Debian
@@ -13,7 +12,6 @@
 
 * 客户端使用 `HMCL`安装游戏。
 * 安装 `Optifine`来使用光影。
-
 
 网络结构图
 
@@ -94,34 +92,22 @@ docker restart mc
 
 `java`的安装非常简单这里也不说了，一路确定下来就行。然后启动 `HMCL`，点击  **游戏列表 > 安装新游戏版本 > 选择自己想玩的版本** ，我这里是 `1.19.3`。等待下载完成后会自动安装，等提示安装成功后即可。
 
-![](//upload-images.jianshu.io/upload_images/13523736-b45704a41f36653c.png?imageMogr2/auto-orient/strip|imageView2/2/w/800/format/webp)
-
-安装成功
 
 ## 安装光影
 
-要想使用光影的话就要先安装前置插件 `optifine`。点此 [OptiFine - Download]( https://optifine.net/downloads) 下载 `optifine`，注意选择对应版本。注意，点击下载会先跳转到一个广告页面，注意规避。这里我使用 `HMCL`安装 `optifine`时虽然可以安装成功，但是启动游戏时会报错，所以只得手动下载安装。
+要想使用光影的话就要先安装前置插件 `optifine`。点此 [OptiFine - Download](https://optifine.net/downloads) 下载 `optifine`，注意选择对应版本。注意，点击下载会先跳转到一个广告页面，注意规避。这里我使用 `HMCL`安装 `optifine`时虽然可以安装成功，但是启动游戏时会报错，所以只得手动下载安装。
 
 下载完成后应该是一个名如 `OptiFine_1.14.3_HD_U_F1.jar`的文件。 **直接运行，在打开的窗口中选择你游戏安装的 `.minecraft`目录点击 `Install`即可。** 一会后会弹出安装成功。
 
-![](//upload-images.jianshu.io/upload_images/13523736-06723d92b8bb576b.png?imageMogr2/auto-orient/strip|imageView2/2/w/400/format/webp)
-
 安装 optifine
 
-安装好了之后打开 `.minecraft\shaderpacks`文件夹，将你下载好的光影包放进去即可。如果你没有这个文件夹的话可以新建一个，或者启动游戏，依次点击 **选项 > 视频设置 > 光影 > 光影包文件夹** 也可以打开。**记得在启动器里选择 `optifine`版本的 mc。它默认是启动原版的。**
-
-![](//upload-images.jianshu.io/upload_images/13523736-0ae007b034963a92.png?imageMogr2/auto-orient/strip|imageView2/2/w/800/format/webp)
-
-安装了optifine的mc
+安装好了之后打开 `.minecraft\shaderpacks`文件夹，将你下载好的光影包放进去即可。如果你没有这个文件夹的话可以新建一个，或者启动游戏，依次点击 **选项 > 视频设置 > 光影 > 光影包文件夹** 也可以打开。**记得在启动器里选择 `optifine`版本的 mc。它默认是启动原版的。**安装了optifine的mc
 
 然后启动游戏选择光影包即可。
 
 # 加入游戏
 
 因为虚拟机就跑在我的工控机上，所以我直接用 `ip:25565`就可以连接服务器，然后在路由器获取我电脑的局域网 ip。然后交给基友，就可以愉快的开黑啦。
-
-![](//upload-images.jianshu.io/upload_images/13523736-4fe3502f42b96349.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
-
 
 # 问题解决
 
@@ -141,7 +127,6 @@ vim server.properties
 ```
 
 将**online-mode:true**的true改为false，然后保存退出。然后重启一下容器。
-
 
 ## 如何替换服务器上地图存档
 
