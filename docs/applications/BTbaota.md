@@ -4,7 +4,6 @@
 
 [https://www.bt.cn/new/download.html](https://www.bt.cn/new/download.html)
 
-
 #### 全面的操作
 
 > 宝塔面板是一款服务器管理软件，支持windows和linux系统，可以通过Web端轻松管理服务器，提升运维效率。例如：创建管理网站、FTP、数据库，拥有可视化文件管理器，可视化软件管理器，可视化CPU、内存、流量监控图表，计划任务等功能。
