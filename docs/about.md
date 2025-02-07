@@ -20,3 +20,7 @@ sidebar_position: 7
 [Windows 10 上的 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/)
 
 [Aria2 Pro-功能强大Aria2 Docker 容器镜像：安装简单,下载速度快](https://wzfou.com/aria2-pro-docker/)
+
+[一起玩 NAS!](https://wiki.slarker.me/)
+
+[https://www.hcjike.com/categories/nas/](https://www.hcjike.com/categories/nas/)

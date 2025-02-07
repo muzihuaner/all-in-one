@@ -20,14 +20,29 @@ Emby同样支持Roku、Amazon Fire TV、Chromecast和Apple TV等流媒体设备�
 
 开心版：
 
-[https://hub.docker.com/r/lovechen/embyserver](https://hub.docker.com/r/lovechen/embyserver)
+https://hub.docker.com/r/amilys/embyserver
+
+```
+docker run -d --privileged \
+    --name=embyserver \ #名称
+    --network host \ #网络模式
+    -v /docker/emby_happy_amilys:/config \ #配置文件
+    -v /data:/data \ #媒体数据目录, 电影, 电视剧等
+    --device=/dev/dri/ \ #核显
+    --gpus=all \ #给容器新增gpu 使容器可以使用宿主机的gpu 
+    -e NVIDIA_VISIBLE_DEVICES=all \ # nvidia显卡ID
+    -e NVIDIA_DRIVER_CAPABILITIES=all \ #显卡驱动程序功能 utility, compute, all
+    -p 8096:8096 \ #端口
+    -p 8920:8920 \ #端口
+    -e UID=0 \ #用户ID 通过id user查看对应的数字
+    -e GID=0 \ #组ID  
+    -e TZ=Asia/Shanghai \ #时区
+    --restart unless-stopped \ #自动重启, 失败重启等
+    amilys/embyserver:latest 
+```
 
 其他：
 
-M3u直播源：
-
-[https://gcore.jsdelivr.net/gh/muzihuaner/huancdn@main/other/20210808384.m3u](https://gcore.jsdelivr.net/gh/muzihuaner/huancdn@main/other/20210808384.m3u)
-
 Xml TV电视指南数据
 
-[http://epg.51zmt.top:8000/](http://epg.51zmt.top:8000/)
+[http://epg.51zmt.top:8000/e.xml](http://epg.51zmt.top:8000/e.xml)

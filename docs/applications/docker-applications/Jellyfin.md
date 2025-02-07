@@ -37,6 +37,9 @@ docker run -d -p 8096:8096 -v /jellyfin/config:/config -v /media/xxx:/media jell
 
 当然除此之外，还有什么显卡直通之类，可以自己研究一下
 
-中国特供版
+### 中国特供版
 
 [https://hub.docker.com/r/nyanmisaka/jellyfin](https://hub.docker.com/r/nyanmisaka/jellyfin)
+
+### jellyfin刮削插件MetaShark
+https://github.com/cxfksword/jellyfin-plugin-metashark

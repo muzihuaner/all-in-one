@@ -1,85 +1,43 @@
 ---
 sidebar_position: 1
 ---
-# Pve安装教程
+# PVE安装教程
 
-## 介绍
+Proxmox Virtual Environment（Proxmox VE 或 PVE）是一款功能强大的开源服务器虚拟化平台，以下是相关介绍及安装步骤：
 
-PVE，全称Proxmox Virtual Environment，是基于Debian的Linux系统，虚拟机内核为KVM。硬件兼容性优秀。界面功能不强，很多操作要靠命令行，但扩展能力几乎是无限的。
+### Proxmox Virtual Environment 介绍
 
-## 准备
+- **技术基础**：基于 Debian Linux 操作系统，采用基于 Ubuntu 的定制内核，确保了系统的稳定性和兼容性，为虚拟化提供了坚实的底层支持。
+- 核心技术
+  - **KVM（Kernel-based Virtual Machine）**：即基于内核的虚拟机，是 PVE 的主要虚拟化技术之一，能创建和运行全功能虚拟机，充分利用硬件虚拟化支持，如 Intel VT 或 AMD -V，让每个虚拟机拥有接近裸金属的性能和良好的隔离性，可支持 Windows、Linux 等多种操作系统。
+  - **LXC（Linux Containers）**：基于 Linux 内核的容器技术，在 PVE 中也得到了支持。容器能提供轻量级的隔离环境，共享主机内核，适用于快速启动、低开销的应用场景，适合运行相同或相似 Linux 发行版的服务或微服务架构。
+- 主要功能
+  - **Web 管理界面**：提供直观的基于浏览器的管理界面，无需安装客户端软件。管理员可通过界面轻松进行虚拟机和容器的创建、配置、迁移、备份和恢复等操作，还能监控资源使用情况，管理存储、网络、防火墙规则等。
+  - **集群支持**：允许将多个节点组成集群，实现资源集中管理和高可用性。集群中的节点可协同工作，提供故障转移、负载均衡和资源共享等功能，保障业务连续性和扩展性。
+  - **存储管理**：支持本地磁盘、网络存储如 iSCSI、NFS、Ceph 等多种存储后端，并具备精简配置、快照、复制和备份等高级特性，满足不同数据保护和效率需求。
+  - **备份与恢复**：内建备份系统，可对虚拟机和容器进行定期或按需备份，备份数据能存储在本地或远程位置，支持增量备份和压缩以节省空间，恢复过程简单快捷。
+  - **网络与安全**：集成防火墙功能，可为每个虚拟机或容器定义详细网络访问规则，确保网络安全。同时支持 VLAN、IPsec VPN、负载均衡器等网络服务，便于构建复杂企业级网络架构。
+  - **模板与快照**：提供系统模板功能，简化新虚拟机或容器的部署，用户可快速复制预配置好的系统环境。快照功能可捕获虚拟资源某一时刻的状态，用于快速恢复或数据对比等操作。
+- 特点优势
+  - **开源免费**：基于开源理念，无需授权费用，降低了企业虚拟化成本，尤其是对于不需要商业技术支持的用户。
+  - **易于使用**：无论是安装还是日常管理，都较为简单，有图形化的 Web 界面，方便新手操作，即使没有丰富技术经验的人员也能快速上手。
+  - **高度集成**：将计算、网络、存储等功能集成在一个平台，提供统一解决方案，实现资源的高度整合与优化，避免了使用多个不同工具和系统带来的复杂性。
+  - **灵活扩展**：支持横向扩容，可方便地添加节点到集群中，轻松扩展计算和存储资源，以适应业务增长需求。
+  - **多用户管理**：提供基于角色的权限控制，可对虚拟机、存储、节点等所有对象设置用户管理权限，定义不同权限，控制用户对每个对象的访问，保障系统安全性和资源管理的规范性。
 
-1.U盘-需要制作启动盘
-2.rufus软件-用于制作启动盘
-3.pve镜像
+### Proxmox Virtual Environment 安装
 
-## 资源下载
-
-
-rufus-3.19.exe：[官网地址](https://rufus.ie/zh/ "官网地址")
-proxmox-ve.iso: [官网地址](https://pve.proxmox.com/wiki/Main_Page "官网地址")
-
-## pve安装
-
-### 1.制作镜像
-
-启动refus-3.19，选择U盘，然后选择pve的镜像，然后开始即可，注意会清空U盘的全部数据。
-
-![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-1.png)
-
-### 2.设置U盘启动
-
-进入bios设置即可，有些主板默认usb优先级高的也不用设置。
-
-### 3.安装pve
-
-1. 选择一个硬盘格式化储存空间。
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-2.png)
-2. 设置国家地区，能联网的话会自动帮你选择。
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-3.png)
-3. 设置密码，邮箱随意。
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-4.png)
-4. 依次设置网口、主机名、ip、网关、DNS的信息，最好接入一个路由器，设置一个静态ip即可从另外一台机子浏览器访问。
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-5.png)
-5. 点击next后点击install进行安装。
-6. 安装完毕重启后记得拔掉U盘。
-
-### 4.配置PVE
-
-以下操作需要在有互联网的环境：
-
-1. 根据配置的ip地址访问PVE
-   `https://192.168.1.201:8006/`
-2. 进入pve的shell
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-6.png)
-3. PVE换国内源，加快访问速度
-
-   ```shell
-   # 直接复制如下命令进入shellwget https://mirrors.ustc.edu.cn/proxmox/debian/proxmox-release-bullseye.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bullseye.gpgecho "#deb https://enterprise.proxmox.com/debian/pve bullseye pve-enterprise" > /etc/apt/sources.list.d/pve-enterprise.listecho "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve bullseye pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list   
-   ```
-4. 如果提示没有wget命令就先执行下方命令安装wget
-   `apt install wget`
-5. Debian换源
-
-   ```shell
-   mv /etc/apt/sources.list /etc/apt/sources.list.bknano /etc/apt/sources.list   
-   ```
-6. Sources.list加入源
-
-   ```shell
-   deb http://mirrors.ustc.edu.cn/debian stable main contrib non-free# deb-src http://mirrors.ustc.edu.cn/debian stable main contrib non-freedeb http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free# deb-src http://mirrors.ustc.edu.cn/debian stable-updates main contrib non-free# deb http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free# deb-src http://mirrors.ustc.edu.cn/debian stable-proposed-updates main contrib non-free   
-   ```
-7. 更新&安装ethtool
-
-   ```shell
-   apt updateapt upgrade -y   
-   ```
-8. 开启网卡和核显直通
-
-   ```shell
-   vim /etc/default/grub# 如果命令不存在也可用vi编辑器打开vi /etc/default/grub# 替换如下内容GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on i915.enable_guc=3 quiet"   
-   ```
-
-   案例：
-
-   ![](https://www.benzhu.xyz/wp-content/uploads/2022/08/pve-7.png)
+- 安装前准备
+  - **硬件准备**：准备一台 x86 架构的 PC 机，CPU 要求为 Intel EMT64 或 AMD64，需支持 Intel VT/AMD -V 虚拟化，若要硬件直通，CPU 需支持 VD；内存不低于 2GB；硬盘 16GB 以上；至少一个网口。
+  - **软件准备**：准备一个大于 4GB 的 U 盘用于制作启动盘，从[Proxmox 官网](https://proxmox.com/en/downloads)下载最新版的 PVE 镜像文件，下载软碟通 UltraISO 软件用于制作 U 盘启动盘。
+- 安装步骤
+  - **制作 U 盘启动盘**：用 UltraISO 打开下载的 PVE 镜像文件，选择 “菜单 - 启动 - 写入硬盘映像”，驱动器选择 U 盘盘符，映像文件选择下载的 PVE 安装文件，写入方式选择 RAW，点击 “写入” 开始写盘。
+  - **设置启动顺序**：将制作好的 U 盘插入要安装 PVE 的 PC 机，设置启动顺序为 U 盘启动。
+  - **进入安装界面**：U 盘启动后进入安装界面，选择 “install Proxmox VE”。
+  - **同意安装协议**：出现安装协议，选择 “I agree”。
+  - **选择安装硬盘**：选择要安装 PVE 的硬盘。
+  - **设置国家、地区和键盘**：输入服务器的国家、选择区域和键盘布局，然后单击 “下一步”。
+  - **设置 root 密码和邮箱**：设置 root 登陆密码和邮箱地址。
+  - **配置网络**：设置 Hostname 主机名，分配 IP Address、Netmask 子网掩码、Gateway 网关、DNS Server 等网络信息。
+  - **开始安装**：确认输入无误后点击 “Install” 开始安装，安装完成后拔掉 U 盘，点 “reboot” 重启。
+  - **登录 PVE**：重启后自动默认选择第一项，打开控制端浏览器，在地址栏输入设定的 IP 地址和端口，如 “[https://IP:8006](https://IP:8006/)”，输入用户名 root 和设置的密码即可登录 PVE 的管理界面。

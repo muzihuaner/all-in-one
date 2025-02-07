@@ -18,14 +18,3 @@ sidebar_position: 6
 * Docker 常见问题: [https://docs.docker.com/engine/faq/](https://docs.docker.com/engine/faq/)
 * Docker 远端应用 API: [https://docs.docker.com/develop/sdk/](https://docs.docker.com/develop/sdk/)
 
-### Docker 国内镜像
-
-阿里云的加速器：[https://help.aliyun.com/document_detail/60750.html](https://help.aliyun.com/document_detail/60750.html)
-
-网易加速器：http://hub-mirror.c.163.com
-
-官方中国加速器：https://registry.docker-cn.com
-
-ustc 的镜像：https://docker.mirrors.ustc.edu.cn
-
-daocloud：https://www.daocloud.io/mirror#accelerator-doc（注册后使用）

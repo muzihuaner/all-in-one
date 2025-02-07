@@ -15,3 +15,6 @@ OpenWrt项目是一个针对嵌入式设备的Linux操作系统。OpenWrt不是�
 eSir高大全固件
 
 [https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1](https://drive.google.com/drive/folders/1PsS3c0P7a4A4KY8plQg4Fla8ZI-PGBb1)
+
+iStoreOS
+[https://site.istoreos.com/](https://site.istoreos.com/)
