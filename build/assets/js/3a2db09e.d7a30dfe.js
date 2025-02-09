@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkallinone=self.webpackChunkallinone||[]).push([[8121],{8070:l=>{l.exports=JSON.parse('{"tags":[{"label":"hello","permalink":"/blog/tags/hello","count":1},{"label":"docusaurus-v3","permalink":"/blog/tags/docusaurus-v-3","count":1},{"label":"allinone","permalink":"/blog/tags/allinone","count":1}]}')}}]);
