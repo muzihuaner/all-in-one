@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # 制作系统启动 U 盘
 
 如果你想安装系统，不管是 Windows 还是 Linux（比如 PVE，fnOS 等等），或者想启动一个 PE（[Edgeless](https://home.edgeless.top/)），都可以用 [Ventoy](https://www.ventoy.net/cn/download.html) 这个工具来制作启动 U 盘。

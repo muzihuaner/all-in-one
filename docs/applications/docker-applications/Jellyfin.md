@@ -31,7 +31,7 @@ docker run -d -p 8096:8096 -v /jellyfin/config:/config -v /media/xxx:/media jell
 > 1. -p 后面是jellyfin服务的端口号，安装时可以指定，这里使用默认的8096；
 > 2. -v 后面是指定的配置路径，比如/media/ivy/新加卷/影音视频就是我原来的影音物理路径，/media就是jellyfin的映射路径
 
-现在就可以通过http://本地ip:8096来访问jellyfin服务了。
+现在就可以通过本地ip:8096 来访问jellyfin服务了。
 
 #### 这样，我们的jellyfin服务就安装好了。
 

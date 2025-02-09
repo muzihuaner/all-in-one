@@ -129,7 +129,7 @@ docker run -d \
 
 ### 3.1 AriaNg配置
 
-安装完成后，现在打开http://ip:6880访问AriaNg的web管理界面，在AriaNg设置中RPC填入你的密钥。
+安装完成后，现在打开 ip:6880 访问AriaNg的web管理界面，在AriaNg设置中RPC填入你的密钥。
 
 [![Aria2 Pro Docker设置密钥](https://wzfou.cdn.bcebos.com/wp-content/uploads/2022/07/Aria2-Pro-Docker_04-680x366.png)](https://wzfou.cdn.bcebos.com/wp-content/uploads/2022/07/Aria2-Pro-Docker_04.png)
 
