@@ -3,7 +3,7 @@
 ## 创建项目
 
 1. 创建一个目录 clash，进入
-2. 创建 `configs` 文件夹，放入自己的订阅文件，修改订阅文件名为`config.yaml`
+2. 创建 `configs` 文件夹，放入自己的订阅文件，修改订阅文件名为`config.yaml` 配置文件从Clash软件获取
 3. 创建 `docker-compose.yml`
 
 ```
@@ -15,7 +15,7 @@ services:
     image: dreamacro/clash:latest
     container_name: clash
     volumes:
-      - ./configs/config.yaml:/root/.config/clash/config.yaml
+      - /vol2/1000/clash/configs/config.yaml:/root/.config/clash/config.yaml
     ports:
       - "7890:7890/tcp"
       - "7890:7890/udp"
@@ -23,7 +23,7 @@ services:
     restart: always
 
   clash-dashboard:
-    image: centralx/clash-dashboard
+    image: haishanh/yacd:latest
     container_name: clash-dashboard
     ports:
       - "7880:80"
@@ -61,15 +61,25 @@ secret: '你的密码'
 ## 运行
 
 ```
-docker-compose up --build -d
+docker-compose up -d
 ```
 
-![image.png](https://oss.silon.vip/img/8b46e0e0ea9e2c036965aaa3f10e5fb7.image.png)
+在线网页控制面板  
+https://metacubex.github.io/metacubexd/#/  
+https://yacd.metacubex.one/
 
-![image.png](https://oss.silon.vip/img/f4b61e24d7745872d4a4bb08db43ba6e.image.png)
+启动完毕。
 
+访问：http://IP:7880/ 添加clash服务的地址
 
-当然你还可以使用其他控制面板
-```
-docker run -p 1234:80 -d --name yacd --rm ghcr.io/haishanh/yacd:master
-```
+![image-20220703170428513](https://gcore.jsdelivr.net/gh/muzihuaner/huancdn@main/img/image-20220703170428513.png)
+
+### 代理使用
+
+以`iOS`手机为例,基本都一致，在【无线局域网】设置中，已连接的`WIFI`右边的信息图标：
+
+配置`HTTP`代理
+
+![image-20220703170819896](https://gcore.jsdelivr.net/gh/muzihuaner/huancdn@main/img/image-20220703170819896.png)
+
+然后就可以尝试访问https://google.com测试一下了。
