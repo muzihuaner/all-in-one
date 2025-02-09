@@ -1,4 +1,4 @@
-# [**All-in-One 搞基手册**](http://localhost:3000/)
+# [**All-in-One 搞机手册**](http://localhost:3000/)
 
 这个网站使用 [Docusaurus 2](https://docusaurus.io/) 构建, a modern static website generator.
 

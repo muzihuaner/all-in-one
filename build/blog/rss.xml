@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>All-in-One 搞基手册 Blog</title>
+        <title>All-in-One 搞机手册 Blog</title>
         <link>https://allinone.quickso.cn/blog</link>
-        <description>All-in-One 搞基手册 Blog</description>
+        <description>All-in-One 搞机手册 Blog</description>
         <lastBuildDate>Fri, 10 Feb 2023 07:53:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
         <item>
-            <title><![CDATA[你好，All-in-One 搞基手册！]]></title>
+            <title><![CDATA[你好，All-in-One 搞机手册！]]></title>
             <link>https://allinone.quickso.cn/blog/welcome-docusaurus-v2</link>
             <guid>https://allinone.quickso.cn/blog/welcome-docusaurus-v2</guid>
             <pubDate>Fri, 10 Feb 2023 07:53:41 GMT</pubDate>

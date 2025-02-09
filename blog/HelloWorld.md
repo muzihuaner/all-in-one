@@ -1,5 +1,5 @@
 ---
-title: 你好，All-in-One 搞基手册！
+title: 你好，All-in-One 搞机手册！
 description: Hello,World!
 slug: welcome-docusaurus-v2
 tags: [hello, docusaurus-v2 ,allinone]

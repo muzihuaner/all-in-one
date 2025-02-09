@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'All-in-One 搞基手册',
+  title: 'All-in-One 搞机手册',
   tagline: 'Boom！Boom！Boom！',
   favicon: 'img/allinone.svg',
 
@@ -64,7 +64,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'All-in-One 搞基手册',
+        title: 'All-in-One 搞机手册',
         logo: {
           alt: 'All-in-One',
           src: 'img/allinone.svg',
