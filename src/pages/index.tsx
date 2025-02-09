@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}-你的HomeLab指南`}
-      description="寻找一站式HomeLab秘籍？欢迎来到 All - in - One 搞机手册！这里有详尽的硬件知识、系统优化技巧，满足你对HomeLab的探索渴望。">
+      description="寻找一站式HomeLab秘籍？欢迎来到 All - in - One 搞机手册！这里有详尽的硬件知识、优质应用推荐、系统优化技巧，满足你对HomeLab的探索。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
