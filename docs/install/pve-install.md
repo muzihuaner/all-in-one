@@ -1,6 +1,4 @@
----
-sidebar_position: 1
----
+
 # PVE安装教程
 
 Proxmox Virtual Environment（Proxmox VE 或 PVE）是一款功能强大的开源服务器虚拟化平台，以下是相关介绍及安装步骤：

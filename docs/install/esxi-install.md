@@ -1,6 +1,4 @@
----
-sidebar_position: 2
----
+
 # Esxi安装教程
 
 下载：
