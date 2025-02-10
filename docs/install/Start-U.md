@@ -4,10 +4,15 @@ sidebar_position: 1
 # 制作系统启动 U 盘
 
 如果你想安装系统，不管是 Windows 还是 Linux（比如 PVE，fnOS 等等），或者想启动一个 PE（[Edgeless](https://home.edgeless.top/)），都可以用 [Ventoy](https://www.ventoy.net/cn/download.html) 这个工具来制作启动 U 盘。
+Ventoy:
+https://www.ventoy.net/
 
 制作启动 U 盘方法很简单，如果你是 Windows 系统，准备一个空闲的 U 盘，把 U 盘插到电脑上，下载 Ventoy 的 Windows 版，解压运行，直接安装 Ventoy 到 U 盘就可以了。
 
 之后把你下载好的 ISO 镜像复制到 U 盘根目录即可。
+
+Rufus
+https://rufus.ie/
 
 ### 从 U 盘启动
 

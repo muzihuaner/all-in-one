@@ -1,7 +1,7 @@
-# Windows Server NAS
+# Windows Server
 
 
-[【Windows Server NAS入门到入坑】WindowsServer 2022系统安装]([ https://www.bilibili.com/video/BV1cN4y1U79b/](https://www.bilibili.com/video/BV1cN4y1U79b/))
+[【Windows Server NAS入门到入坑】WindowsServer 2022系统安装]( https://www.bilibili.com/video/BV1cN4y1U79b/)
 
 
 [【WindowsServer NAS入门到入坑】进阶设置](https://www.bilibili.com/video/BV1Ag4y1U77N/)

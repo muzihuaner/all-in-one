@@ -1,4 +1,4 @@
-# Unraid安装教程
+# Unraid
 
 ![](https://craftassets.unraid.net/cache/awss3cloudfront/featured-image/96846/FRproduct-compressed_2020-11-03-212833_b8a7d9426d44becbfab22c3e3256f6d7.webp)
 
