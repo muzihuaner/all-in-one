@@ -9,6 +9,11 @@ const config: Config = {
   tagline: '你的HomeLab指南',
   favicon: 'img/allinone.svg',
 
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
   // Set the production url of your site here
   url: 'https://allinone.quickso.cn',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -102,7 +107,7 @@ const config: Config = {
         },
         {
           title: '关注我们',
-          items: [
+           items: [
             {
               label: '欢哥科技官方网站',
               href: 'https://huangetech.github.io/',
