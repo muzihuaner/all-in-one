@@ -5,21 +5,51 @@ qBittorrent是一款跨平台的免费开源BitTorrent客户端，用于在Windo
 
 官方网站:[https://www.qbittorrent.org/](https://www.qbittorrent.org/)
 
-安装教程参考:[https://sleele.com/2020/04/09/docker-qbittorrent-optimizing/](https://sleele.com/2020/04/09/docker-qbittorrent-optimizing/)
+
+docker-compose.yml 
+```
+version: "3"
+services:
+  qbittorrentee:
+    image: superng6/qbittorrentee
+    container_name: qbittorrentee
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Asia/Shanghai
+      - WEBUIPORT=8082
+      - ENABLE_DOWNLOADS_PERM_FIX=true
+    volumes:
+      - ./qbittorrentee/config:/config
+      - ./qbittorrentee/downloads:/downloads
+    ports:
+      - 6881:6881
+      - 6881:6881/udp
+      - 8082:8082
+    restart: unless-stopped
+```
+启动
+'''
+docker-compose up -d
+
+'''
 
 
-```
-docker create  \
-    --name=qbittorrent  \
-    -e WEBUIPORT=8080  \
-    -e PUID=1026 \
-    -e PGID=100 \
-    -e TZ=Asia/Shanghai \
-    -p 6881:6881  \
-    -p 6881:6881/udp  \
-    -p 8080:8080  \
-    -v /配置文件位置:/config  \
-    -v /下载位置:/downloads  \
-    --restart unless-stopped  \
-    superng6/qbittorrent:latest
-```
+docker cli
+
+'''
+docker run -d \
+  --name=qbittorrent \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Etc/UTC \
+  -e WEBUI_PORT=8082 \
+  -e TORRENTING_PORT=6881 \
+  -p 8082:8082 \
+  -p 6881:6881 \
+  -p 6881:6881/udp \
+  -v ./qbittorrentee/config:/config \
+  -v ./qbittorrentee/downloads:/downloads \
+  --restart unless-stopped \
+  lscr.io/linuxserver/qbittorrent:latest
+'''
