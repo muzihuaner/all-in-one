@@ -5,51 +5,48 @@ qBittorrent是一款跨平台的免费开源BitTorrent客户端，用于在Windo
 
 官方网站:[https://www.qbittorrent.org/](https://www.qbittorrent.org/)
 
+镜像说明
 
-docker-compose.yml 
+https://docs.linuxserver.io/images/docker-qbittorrent/#parameters
+
+Docker CLI
+
 ```
-version: "3"
-services:
-  qbittorrentee:
-    image: superng6/qbittorrentee
-    container_name: qbittorrentee
-    environment:
-      - PUID=1026
-      - PGID=100
-      - TZ=Asia/Shanghai
-      - WEBUIPORT=8082
-      - ENABLE_DOWNLOADS_PERM_FIX=true
-    volumes:
-      - ./qbittorrentee/config:/config
-      - ./qbittorrentee/downloads:/downloads
-    ports:
-      - 6881:6881
-      - 6881:6881/udp
-      - 8082:8082
-    restart: unless-stopped
-```
-启动
-'''
-docker-compose up -d
-
-'''
-
-
-docker cli
-
-'''
 docker run -d \
   --name=qbittorrent \
   -e PUID=1000 \
   -e PGID=1000 \
-  -e TZ=Etc/UTC \
-  -e WEBUI_PORT=8082 \
+  -e TZ=Asia/Shanghai \
+  -e WEBUI_PORT=8080 \
   -e TORRENTING_PORT=6881 \
-  -p 8082:8082 \
+  -p 8080:8080 \
   -p 6881:6881 \
   -p 6881:6881/udp \
-  -v ./qbittorrentee/config:/config \
-  -v ./qbittorrentee/downloads:/downloads \
+  -v /path/to/qbittorrent/appdata:/config \
+  -v /path/to/downloads:/downloads `#optional` \
   --restart unless-stopped \
   lscr.io/linuxserver/qbittorrent:latest
-'''
+```
+
+
+Docker-compose
+```
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - /path/to/qbittorrent/appdata:/config
+      - /path/to/downloads:/downloads #optional
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
+```

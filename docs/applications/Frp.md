@@ -20,10 +20,12 @@ frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP
 
 ---
 
-这里推荐stilleshan的一键安装脚本
+这里推荐stilleshan的FRPS &FRPC一键安装脚本
 
 项目地址：
-
+服务端:
+[https://github.com/stilleshan/frps](https://github.com/stilleshan/frps)
+客户端:
 [https://github.com/stilleshan/frpc](https://github.com/stilleshan/frpc)
 
 ### 使用

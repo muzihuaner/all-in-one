@@ -8,33 +8,9 @@ sidebar_position: 4
 
 ```
 #下面的加速器可能随时失效，需要自己找
-https://docker.registry.cyou
-https://docker-cf.registry.cyou
-https://dockerpull.com
-https://dockerproxy.cn
-https://docker.1panel.live
-https://hub.rat.dev
-https://dhub.kubesre.xyz
-https://docker.hlyun.org
-https://docker.kejilion.pro
-https://registry.dockermirror.com
-https://docker.chenby.cn
-https://ccr.ccs.tencentyun.com
-https://hub.littlediary.cn
-https://hub.firefly.store
-https://docker.nat.tf
-https://hub.crdz.gq
-https://noohub.ru
-https://docker.nastool.de
-https://hub.docker-ttc.xyz
-https://freeno.xyz
-https://docker.hpcloud.cloud
-https://dislabaiot.xyz
-https://ginger20240704.asia
-https://doublezonline.cloud
-https://dockerproxy.com
-```
 
+```
+https://docker.1ms.run
 
 ### Linux Docker镜像仓库配置
 ``` 

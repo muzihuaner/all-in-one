@@ -2,8 +2,83 @@
 
 RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。RSSHub 借助于开源社区的力量快速发展中，目前已适配数百家网站的上千项内容
 
-https://docs.rsshub.app/zh/
+https://rsshub.netlify.app/zh/
 
 ```
-$ docker run -d --name rsshub -p 1200:1200 diygod/rsshub
+docker run -d --name rsshub -p 1200:1200 diygod/rsshub
 ```
+
+Docker compose
+
+```
+services:
+    rsshub:
+        # two ways to enable puppeteer:
+        # * comment out marked lines, then use this image instead: diygod/rsshub:chromium-bundled
+        # * (consumes more disk space and memory) leave everything unchanged
+        image: diygod/rsshub # or ghcr.io/diygod/rsshub
+        restart: always
+        ports:
+            - '1200:1200'
+        environment:
+            NODE_ENV: production
+            CACHE_TYPE: redis
+            REDIS_URL: 'redis://redis:6379/'
+            PUPPETEER_WS_ENDPOINT: 'ws://browserless:3000' # marked
+            PUPPETEER_REAL_BROWSER_SERVICE: 'http://real-browser:3000' # marked
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://localhost:1200/healthz']
+            interval: 30s
+            timeout: 10s
+            retries: 3
+        depends_on:
+            - redis
+            - browserless # marked
+
+    real-browser:
+        image: ghcr.io/hyoban/puppeteer-real-browser-hono
+        restart: always
+        ports:
+            - '3001:3000'
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://localhost:3000']
+            interval: 30s
+            timeout: 10s
+            retries: 3
+
+    browserless: # marked
+        image: browserless/chrome # marked
+        restart: always # marked
+        ulimits: # marked
+            core: # marked
+                hard: 0 # marked
+                soft: 0 # marked
+        healthcheck: # marked
+            test: ['CMD', 'curl', '-f', 'http://localhost:3000/pressure'] # marked
+            interval: 30s # marked
+            timeout: 10s # marked
+            retries: 3 # marked
+
+    redis:
+        image: redis:alpine
+        restart: always
+        volumes:
+            - redis-data:/data
+        healthcheck:
+            test: ['CMD', 'redis-cli', 'ping']
+            interval: 30s
+            timeout: 10s
+            retries: 5
+            start_period: 5s
+
+volumes:
+    redis-data:
+```
+
+执行
+
+```
+docker volume create redis-data
+docker-compose up -d
+```
+
