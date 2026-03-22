@@ -28,3 +28,24 @@ Tailscale 的主要特点包括：
    ```
 
    执行此命令后，会打开一个浏览器窗口，要求你登录 Tailscale 账户进行授权。登录并授权后，该设备就会加入到你的 Tailscale 网络中。
+
+3. 国内源安装
+参考 Tailscale 的安装教程，在安装完成后替换软件源：
+
+```bash
+sudo sed -i 's,pkgs.tailscale.com/stable,mirrors.ustc.edu.cn/tailscale,g' /etc/apt/sources.list.d/tailscale.list
+```
+然后执行 sudo apt update 刷新软件包缓存。
+
+安装
+```bash
+apt-get install -y tailscale tailscale-archive-keyring
+```
+4.在 Tailscale 中禁用 DNS
+Tailscale 中的--accept-dns=false标志用于禁用 Tailscale 管理控制台提供的 DNS 配置。默认情况下，Tailscale 可能会将您的设备配置为使用来自 Tailnet 的 MagicDNS 或其他 DNS 设置。此标志可确保您的设备不接受或应用这些 DNS 设置。
+
+```bash
+tailscale up --accept-dns=false --netfilter-mode=off
+```
+
+此命令会将您的设备连接到 Tailscale 网络，同时确保未应用任何来自 Tailscale 网络的 DNS 设置。您的设备将继续使用其现有的 DNS 配置。

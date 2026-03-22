@@ -14,7 +14,7 @@
             <guid>https://allinone.quickso.cn/blog/welcome-docusaurus-v3</guid>
             <pubDate>Fri, 10 Feb 2023 07:53:41 GMT</pubDate>
             <description><![CDATA[Hello,World!]]></description>
-            <content:encoded><![CDATA[<p>欢迎来到本博客。 此博客使用 <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer"><strong>Docusaurus 3</strong></a> 搭建。</p>
+            <content:encoded><![CDATA[<p>欢迎来到本博客。 此博客使用 <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer" class=""><strong>Docusaurus 3</strong></a> 搭建。</p>
 <p>2023年2月10日，本项目上线啦！</p>]]></content:encoded>
             <category>hello</category>
             <category>docusaurus-v3</category>
